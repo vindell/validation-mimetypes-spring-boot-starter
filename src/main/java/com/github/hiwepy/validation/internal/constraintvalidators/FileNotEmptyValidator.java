@@ -2,23 +2,22 @@ package com.github.hiwepy.validation.internal.constraintvalidators;
 
 import com.github.hiwepy.validation.MimeTypeDetectorHolder;
 import com.github.hiwepy.validation.constraints.FileNotEmpty;
-import com.github.hiwepy.validation.utils.FilemimeUtils;
 import com.github.hiwepy.validation.utils.FiletypeUtils;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.ArrayUtils;
-import org.overviewproject.mime_types.GetBytesException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.convert.DataSizeUnit;
 import org.springframework.util.StringUtils;
 import org.springframework.util.unit.DataSize;
 import org.springframework.util.unit.DataUnit;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintValidatorContext;
-import java.io.IOException;
-import java.util.*;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 

@@ -1,9 +1,9 @@
 package com.github.hiwepy.validation.utils;
 
+import org.springframework.util.StringUtils;
+
 import java.io.File;
 import java.util.Properties;
-
-import org.springframework.util.StringUtils;
 
 
 public abstract class FilemimeUtils {
